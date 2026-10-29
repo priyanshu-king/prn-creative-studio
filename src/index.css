@@ -1,0 +1,166 @@
+/* ============================================================
+ * PRN Design Platform — Design System Tokens & Global Reset
+ * Original brand: Deep Ink / Warm Ivory / Electric Lime / Coral
+ * ============================================================ */
+
+:root {
+  /* ── PRN Brand Palette ───────────────────────────────── */
+  --prn-ink:        #0d0e14;
+  --prn-ink-mid:    #1a1d2e;
+  --prn-ink-soft:   #252840;
+  --prn-ink-muted:  #3a3d5c;
+
+  --prn-ivory:      #f5f2eb;
+  --prn-ivory-warm: #ede9df;
+  --prn-ivory-cool: #f0f0f6;
+
+  --prn-lime:       #c8f135;
+  --prn-lime-dim:   #b4dc20;
+  --prn-lime-pale:  #edfaa2;
+
+  --prn-coral:      #ff5f41;
+  --prn-coral-dim:  #e84b2e;
+  --prn-coral-pale: #ffe0da;
+
+  --prn-sky:        #4fc3f7;
+  --prn-sky-dim:    #29b6f6;
+  --prn-violet:     #9b8ef4;
+  --prn-violet-dim: #7c6ef0;
+
+  /* ── Surface / Neutral Scale ─────────────────────────── */
+  --surface-0:    #ffffff;
+  --surface-1:    #f8f8fa;
+  --surface-2:    #f0f0f5;
+  --surface-3:    #e4e4ed;
+  --surface-4:    #d0d0de;
+
+  --ink-0:        #111118;
+  --ink-1:        #1e1e28;
+  --ink-2:        #2c2c3e;
+  --ink-3:        #3f3f58;
+  --ink-4:        #5a5a7a;
+  --ink-5:        #7a7a9a;
+  --ink-6:        #9c9cba;
+  --ink-7:        #bdbdcd;
+  --ink-8:        #d8d8e4;
+
+  /* ── Semantic Colors ─────────────────────────────────── */
+  --color-primary:        var(--prn-violet);
+  --color-primary-dim:    var(--prn-violet-dim);
+  --color-accent:         var(--prn-lime);
+  --color-accent-dim:     var(--prn-lime-dim);
+  --color-danger:         var(--prn-coral);
+  --color-danger-pale:    var(--prn-coral-pale);
+  --color-success:        #34d399;
+  --color-warning:        #fbbf24;
+
+  /* ── Editor-specific ─────────────────────────────────── */
+  --editor-bg:            #1c1c2a;
+  --editor-dock-bg:       #16162a;
+  --editor-panel-bg:      #13131f;
+  --editor-border:        rgba(255,255,255,0.08);
+  --editor-border-strong: rgba(255,255,255,0.14);
+  --editor-text:          #e0e0f0;
+  --editor-text-muted:    #7a7a9a;
+  --editor-text-dim:      #4a4a6a;
+  --editor-hover:         rgba(255,255,255,0.06);
+  --editor-active:        rgba(200,241,53,0.12);
+  --editor-active-border: rgba(200,241,53,0.4);
+
+  /* ── Typography ──────────────────────────────────────── */
+  --font-sans:  'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-display: 'Plus Jakarta Sans', 'Inter', sans-serif;
+  --font-mono:  'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
+
+  /* ── Spacing ─────────────────────────────────────────── */
+  --sp-1: 4px;   --sp-2: 8px;   --sp-3: 12px;  --sp-4: 16px;
+  --sp-5: 20px;  --sp-6: 24px;  --sp-8: 32px;  --sp-10: 40px;
+  --sp-12: 48px; --sp-16: 64px;
+
+  /* ── Radius ──────────────────────────────────────────── */
+  --r-xs:   3px;
+  --r-sm:   6px;
+  --r-md:   10px;
+  --r-lg:   16px;
+  --r-xl:   24px;
+  --r-2xl:  32px;
+  --r-full: 9999px;
+
+  /* ── Shadows ─────────────────────────────────────────── */
+  --shadow-xs:  0 1px 2px rgba(0,0,0,0.04);
+  --shadow-sm:  0 1px 6px rgba(0,0,0,0.07);
+  --shadow-md:  0 4px 16px rgba(0,0,0,0.10);
+  --shadow-lg:  0 8px 32px rgba(0,0,0,0.13);
+  --shadow-xl:  0 20px 64px rgba(0,0,0,0.18);
+  --shadow-2xl: 0 40px 100px rgba(0,0,0,0.25);
+
+  --shadow-ink-sm:  0 2px 12px rgba(0,0,0,0.4);
+  --shadow-ink-md:  0 4px 24px rgba(0,0,0,0.5);
+  --shadow-ink-lg:  0 8px 40px rgba(0,0,0,0.6);
+
+  /* ── Transitions ─────────────────────────────────────── */
+  --t-fast:    0.1s ease;
+  --t-std:     0.18s ease;
+  --t-slow:    0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --t-spring:  0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* ── Reset ───────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--surface-0);
+  color: var(--ink-0);
+  line-height: 1.6;
+}
+
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; }
+img, video { max-width: 100%; display: block; }
+input, select, textarea { font-family: inherit; }
+
+/* ── Scrollbar ───────────────────────────────────────────── */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--ink-8); border-radius: var(--r-full); }
+::-webkit-scrollbar-thumb:hover { background: var(--ink-6); }
+
+.editor-panel ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.12); }
+.editor-panel ::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.22); }
+
+/* ── Focus ───────────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--prn-violet);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ── Utilities ───────────────────────────────────────────── */
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+}
+
+.truncate { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+
+/* ── Reduced motion ──────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
