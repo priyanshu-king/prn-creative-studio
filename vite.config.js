@@ -2,6 +2,9 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 export default defineConfig({
+  // GitHub Pages hosts this project under /prn-creative-studio/.
+  // Local development and other hosts keep the root path.
+  base: process.env.GITHUB_PAGES === 'true' ? '/prn-creative-studio/' : '/',
   plugins: [react()],
   build: {
     chunkSizeWarningLimit: 800,
